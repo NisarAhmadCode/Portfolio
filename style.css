@@ -1,0 +1,346 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header & Nav */
+header {
+    background-color: #0d47a1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: white;
+    user-select: none;
+}
+
+/* Hamburger */
+input#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 28px;
+    height: 22px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Nav Links */
+nav ul.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul.nav-links li a:hover,
+nav ul.nav-links li a:focus {
+    background-color: #1976d2;
+    outline: none;
+}
+
+/* Main content wrapper */
+main {
+    max-width: 1200px;
+    margin: 50px auto 80px;
+    padding: 0 20px;
+}
+
+/* Section base */
+.section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 80px;
+    /* offset for sticky nav */
+}
+
+.section:last-child {
+    border: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Titles */
+.main-title {
+    font-size: 3rem;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #0d47a1;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.section-desc {
+    font-size: 1.25rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Home Section Content */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.content .text {
+    flex: 1;
+}
+
+.content .text h2 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content .text p {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+    background-color: #0d47a1;
+    color: white;
+    padding: 15px 36px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(13, 71, 161, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #1976d2;
+    transform: scale(1.05);
+    outline: none;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Image */
+.content .pic {
+    flex-shrink: 0;
+}
+
+.content .pic img {
+    width: 230px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.content .pic img:hover {
+    transform: scale(1.07);
+}
+
+/* About Section Text */
+.about-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Education List */
+.education-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+    box-shadow: 0 15px 35px rgba(13, 71, 161, 0.3);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #0d47a1;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-info {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.contact-info a {
+    color: #0d47a1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .content .pic img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul.nav-links {
+        position: fixed;
+        top: 65px;
+        right: 0;
+        height: calc(100% - 65px);
+        background-color: #0d47a1;
+        width: 220px;
+        flex-direction: column;
+        padding-top: 30px;
+        gap: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    nav ul.nav-links li {
+        margin-left: 20px;
+    }
+
+    input#menu-toggle:checked~ul.nav-links {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-desc {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+}
